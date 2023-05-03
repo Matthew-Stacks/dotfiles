@@ -1,0 +1,77 @@
+# aliases
+
+# convenience aliases
+#alias mkcd='mkdir -p $* && cd $_'
+#alias cdls='cd $@ && ls
+
+# suffix aliases (ie: `cd ..4`)
+alias -g H='| head'
+alias -g T='| tail'
+alias -g G='| grep -E'
+alias -g S='| sort'
+alias -g L='| less'
+alias -g M='| more'
+alias -g ..2='../..'
+alias -g ..3='../../..'
+alias -g ..4='../../../..'
+alias -g ..5='../../../../..'
+alias -g ..6='../../../../../..'
+alias -g ..7='../../../../../../..'
+alias -g ..8='../../../../../../../..'
+alias -g ..9='../../../../../../../../..'
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+
+# mask built-ins with better defaults
+# alias cp='cp -i'
+# alias mv='mv -i'
+# alias rm='rm -i'
+alias ping='ping -c 4'
+alias vi=vim
+
+# more ways to ls
+alias l='ls -lah'
+alias la='ls -lAh'
+alias ldot='ls -ld .*'
+
+alias quit='exit'
+
+# tar
+alias tarls="tar -tvf"
+alias untar="tar -xf"
+
+# date/time
+alias timestamp="date '+%Y-%m-%d %H:%M:%S'"
+alias datestamp="date '+%Y-%m-%d'"
+
+# find
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+# disk usage
+alias biggest='du -s ./* | sort -nr | awk '\''{print $2}'\'' | xargs du -sh'
+alias duexe='du -x --max-depth=1 | sort -n'
+alias dudir='du -d 1 -h'
+alias dufile='du -sh *'
+
+# url encode/decode
+alias urld='python3 -c "import sys, urllib.parse as ul; print(ul.unquote_plus(sys.argv[1]))"'
+alias urln='python3 -c "import sys, urllib.parse as ul; print(ul.quote_plus(sys.argv[1]))"'
+
+# history
+alias hstat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
+alias h="fc -li"
+
+# misc
+alias zshrc='"${EDITOR:-vim}" "${ZDOTDIR:-$HOME}"/.zshrc'
+alias zbench='for i in {1..10}; do /usr/bin/time zsh -lic exit; done'
+alias zdot='cd ${ZDOTDIR:-~}'
+alias d=docker
+alias dc='docker compose'
+alias g='git'
+alias k=kubectl
+alias upd='sudo apt -y update && sudo apt -y upgrade && sudo apt -y autoclean'
+alias xzsh='exec zsh'
+
