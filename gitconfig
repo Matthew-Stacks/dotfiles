@@ -1,3 +1,10 @@
 [user]
 	email = m@mstacks.dev
-	name = Matthew-Stacks
+	name = Matt Stacks
+	signingkey = 4709DCE6D70EDD06
+[color]
+	ui = auto
+[credential "https://github.com"]
+	username = Matthew-Stacks
+[core]
+	autocrlf = input
