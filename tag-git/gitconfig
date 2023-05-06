@@ -1,6 +1,13 @@
 [user]
 	email = m@mstacks.dev
 	name = Matt Stacks
+	signingkey = 4709DCE6D70EDD06
+[color]
+	ui = auto
 [credential "https://github.com"]
-	helper = 
+	username = Matthew-Stacks
 	helper = !/usr/bin/gh auth git-credential
+[core]
+	autocrlf = input
+[init]
+	defaultBranch = main
