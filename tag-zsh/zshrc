@@ -74,3 +74,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Created by `pipx` on 2023-05-08 19:15:52
+export PATH="$PATH:/home/m/.local/bin"

@@ -55,3 +55,5 @@ alias vi=vim
 alias l='ls -lah --color=auto'
 alias lr='ls -laR --color=auto'
 alias quit='exit'
+alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws public.ecr.aws/aws-cli/aws-cli'
+
